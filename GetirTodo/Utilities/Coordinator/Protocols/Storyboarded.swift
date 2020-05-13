@@ -13,7 +13,11 @@ public protocol Storyboarded {
     
     static func instantiate(in board: Storyboard) -> Self
     
-    func push(from viewController: UIViewController, showBottom hidesBottomBarWhenPushed: Bool, animated: Bool)
+    func push(from viewController: UIViewController,
+              showBottom hidesBottomBarWhenPushed: Bool,
+              animated: Bool)
+    
+    func pop(animated: Bool)
     
     func modal(from viewController: UIViewController, animated: Bool)
     
@@ -24,7 +28,7 @@ public extension Storyboarded where Self: UIViewController {
     
     static func instantiate(in board: Storyboard) -> Self {
         let storyboard = board.storyboard
-        let id = String(describing: self.self)
+        let id = String(describing: self)
         let viewController = storyboard.instantiateViewController(withIdentifier: id)
         guard let storyboardedViewController = viewController as? Self else {
             fatalError("@ERROR \(viewController) is not a Storyboarded")
@@ -33,14 +37,25 @@ public extension Storyboarded where Self: UIViewController {
     }
     
     func push(from viewController: UIViewController,
-              showBottom hidesBottomBarWhenPushed: Bool = false,
+              showBottom hidesBottomBarWhenPushed: Bool = true,
               animated: Bool = true) {
         
-        guard let navigationController = viewController.navigationController else {
-            fatalError("@ERROR \(viewController) is not a navigation controller")
+        var navigationController: UINavigationController? = nil
+        
+        if let navigation = viewController as? UINavigationController {
+            navigationController = navigation
+        }else{
+            guard let navigation = viewController.navigationController else {
+                fatalError("@ERROR \(viewController) is not a navigation controller")
+            }
+            navigationController = navigation
         }
-        navigationController.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
-        navigationController.pushViewController(self, animated: animated)
+        navigationController!.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
+        navigationController!.pushViewController(self, animated: animated)
+    }
+    
+    func pop(animated: Bool = true) {
+        self.navigationController?.popViewController(animated: animated)
     }
     
     func modal(from viewController: UIViewController, animated: Bool = true) {

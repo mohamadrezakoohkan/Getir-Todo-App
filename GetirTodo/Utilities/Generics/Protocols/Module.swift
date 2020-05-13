@@ -12,6 +12,13 @@ import Combine
 
 public protocol Module {
     
-    var storyBoard: Storyboard { get }
+    associatedtype DatabaseType
+    associatedtype CoordinatorType
+
+    var storyboard: Storyboard { get }
         
+    var database: DatabaseType { get }
+    
+    var coordinator: CoordinatorType { get }
+
 }

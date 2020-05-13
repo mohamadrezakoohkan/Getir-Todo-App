@@ -1,0 +1,20 @@
+/* 
+  Main.strings
+  GetirTodo
+
+  Created by Mohammad reza Koohkan on 2/24/1399 AP.
+  Copyright © 1399 AP Mohamadreza Koohkan. All rights reserved.
+*/
+
+"main.create" = "Create";
+"main.edit" = "Edit";
+"main.update" = "Update";
+"main.task" = "Task";
+"main.create.task" = "Create task";
+"main.edit.task" = "Edit task";
+"main.create.task.name" = "What you want to name this task?";
+"main.create.task.date" = "When you will finish this task?";
+"main.create.task.description" = "What is this thask is about?";
+"main.edit.task.name" = "Name";
+"main.edit.task.date" = "Due date";
+"main.edit.task.description" = "Description";
