@@ -13,11 +13,10 @@ import Combine
 final class MainViewModel {
     
     let model: MainVC
-    
-    lazy var pagesCount: Int = {
-        return self.model.items.count
-    }()
-    
+    var subscriptions = [AnyCancellable]()
+    @Published var isOnDeleteList: Bool = false
+
+    lazy var pagesCount: Int = self.model.items.count
     lazy var pageTitle: (Int) -> String = { (index: Int) in
         return self.model.items[index].rawValue
     }
@@ -27,11 +26,7 @@ final class MainViewModel {
         .make(list: self.model.items[1], coordinator: self.model.coordinator),
         .make(list: self.model.items[2], coordinator: self.model.coordinator)
     ]
-    
-    var subscriptions = [AnyCancellable]()
-    
-    @Published var isOnDeleteList: Bool = false
-    
+        
     init(model: MainVC) {
         self.model = model
     }
@@ -65,6 +60,6 @@ final class MainViewModel {
     }
     
     func requestDelete() {
-        
+        Main.shared.database.deleteSoftDeletes()
     }
 }

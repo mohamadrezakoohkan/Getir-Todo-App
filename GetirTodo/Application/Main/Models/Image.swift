@@ -14,6 +14,10 @@ enum Image: String {
     
     case plus = "plus.app.fill"
     
+    case trash
+    
+    case checkmark
+    
     var image: UIImage {
         return UIImage(systemName: self.rawValue)!
     }

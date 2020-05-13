@@ -36,6 +36,8 @@
 		DD807CB6246C003B00C97539 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD807CB5246C003B00C97539 /* Main.strings */; };
 		DD807CB8246C00B200C97539 /* MainStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD807CB7246C00B200C97539 /* MainStrings.swift */; };
 		DD807CBA246C01A100C97539 /* StringTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD807CB9246C01A100C97539 /* StringTable.swift */; };
+		DDAA3E90246C26D0008CCF60 /* Keyboard+Appear.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA3E8F246C26D0008CCF60 /* Keyboard+Appear.swift */; };
+		DDAA3E92246C51AF008CCF60 /* SnackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAA3E91246C51AF008CCF60 /* SnackView.swift */; };
 		DDD5739C246B652F0048F81C /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD5739B246B652F0048F81C /* TableViewModel.swift */; };
 		DDF5E403246AD8360009B69B /* TodoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5E402246AD8360009B69B /* TodoVC.swift */; };
 		DDF5E40B246AEED50009B69B /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF5E40A246AEED50009B69B /* UIControlPublisher.swift */; };
@@ -110,6 +112,8 @@
 		DD807CB5246C003B00C97539 /* Main.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Main.strings; sourceTree = "<group>"; };
 		DD807CB7246C00B200C97539 /* MainStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStrings.swift; sourceTree = "<group>"; };
 		DD807CB9246C01A100C97539 /* StringTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTable.swift; sourceTree = "<group>"; };
+		DDAA3E8F246C26D0008CCF60 /* Keyboard+Appear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keyboard+Appear.swift"; sourceTree = "<group>"; };
+		DDAA3E91246C51AF008CCF60 /* SnackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackView.swift; sourceTree = "<group>"; };
 		DDD5739B246B652F0048F81C /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
 		DDF5E402246AD8360009B69B /* TodoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoVC.swift; sourceTree = "<group>"; };
 		DDF5E40A246AEED50009B69B /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				DDF5E438246B20190009B69B /* SearchView.swift */,
 				DD41447B246B3161006745B4 /* TodoCell.swift */,
 				DD807CAE246BF06200C97539 /* ToggleButton.swift */,
+				DDAA3E91246C51AF008CCF60 /* SnackView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				DDF5E430246B17D30009B69B /* UIColor+Color.swift */,
 				DDF5E432246B17DA0009B69B /* UIFont+Font.swift */,
 				DD41447F246B3730006745B4 /* NibbedCell.swift */,
+				DDAA3E8F246C26D0008CCF60 /* Keyboard+Appear.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -515,6 +521,7 @@
 				DDF8DF44246AC5D6000775CC /* MainNavigationController.swift in Sources */,
 				DD12055F246AACD5009FACF5 /* Main.swift in Sources */,
 				DDF8DF42246AC5AE000775CC /* MainVC.swift in Sources */,
+				DDAA3E92246C51AF008CCF60 /* SnackView.swift in Sources */,
 				DDF5E437246B1BAC0009B69B /* MenuView.swift in Sources */,
 				DDF5E435246B191C0009B69B /* TodoListItem.swift in Sources */,
 				DD807CB8246C00B200C97539 /* MainStrings.swift in Sources */,
@@ -553,6 +560,7 @@
 				DD41447D246B3161006745B4 /* TodoCell.swift in Sources */,
 				DD807CBA246C01A100C97539 /* StringTable.swift in Sources */,
 				DDF5E428246B10410009B69B /* UIEdgeInsetsExtension.swift in Sources */,
+				DDAA3E90246C26D0008CCF60 /* Keyboard+Appear.swift in Sources */,
 				DD120571246AB4E6009FACF5 /* StoryboardedViewController.swift in Sources */,
 				DD414480246B3730006745B4 /* NibbedCell.swift in Sources */,
 				DDF5E411246AEF8C0009B69B /* UIControl+Observer.swift in Sources */,

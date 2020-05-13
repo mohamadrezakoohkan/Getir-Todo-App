@@ -42,7 +42,7 @@ internal class MainCoordinator: Coordinator {
        
     func show(todo: Todo?) {
         let vc = TodoVC.instantiate()
-        vc.todo = todo
+        vc.todo = todo != nil ? todo : .init(context: .init(concurrencyType: .mainQueueConcurrencyType))
         self.push(vc)
     }
     

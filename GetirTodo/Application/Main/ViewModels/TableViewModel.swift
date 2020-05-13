@@ -71,13 +71,13 @@ final class TableViewModel {
     }
     
     private func deleteAction(todo: Todo) -> UIAction{
-        return UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive) { _ in
+        return UIAction(title: Main.shared.string.delete, image: Image.trash.image, attributes: .destructive) { _ in
             todo.softDelete()
         }
     }
     
     private func completedAction(todo: Todo) -> UIAction{
-        return UIAction(title: "Compelete", image: UIImage(systemName: "checkmark")) { _ in
+        return UIAction(title: Main.shared.string.complete, image: Image.checkmark.image) { _ in
             todo.complete()
         }
     }

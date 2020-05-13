@@ -85,6 +85,13 @@ public class Todo: NSManagedObject {
         return self.title?.lowercased().hasPrefix(query) == true
     }
 
+    func create() {
+        Todo.add(title: self.title!, about: self.about!, dueDate: self.dueDate!)
+    }
+    
+    func update() {
+        self.modificationOccurred()
+    }
     
 }
 
@@ -123,6 +130,7 @@ extension Todo {
     
     func softDelete() {
         self.softDeleted = true
+        self.completed = true
         self.updatedAt = Date()
         self.modificationOccurred()
     }
@@ -156,7 +164,7 @@ extension Todo: Orm {
     class func request(_ prediction: NSPredicate? = nil) -> [Todo] {
         let request: NSFetchRequest<Todo> = Todo.fetchRequest()
         request.sortDescriptors = [Todo.sortDescriptor]
-        return self.fetch(Todo.fetchRequest(), prediction: prediction)
+        return self.fetch(request, prediction: prediction)
     }
     
     class func all() -> [Todo] {
@@ -173,6 +181,10 @@ extension Todo: Orm {
     
     class func softDeletedTodos() -> [Todo] {
         return self.request(self.softDeletedPrediction)
+    }
+    
+    class func deleteAllTodos() {
+        Todo.erase()
     }
 
 }

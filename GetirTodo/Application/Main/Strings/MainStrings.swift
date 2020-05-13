@@ -15,7 +15,14 @@ final class MainStrings: Singleton, StringTable {
     private static let _shared: MainStrings = .init()
     static var shared: MainStrings {
         return _shared
-        
+    }
+    
+    var complete: String {
+        return self.localize("main.complete")
+    }
+    
+    var delete: String {
+        return self.localize("main.delete")
     }
     
     var create: String {
@@ -53,7 +60,7 @@ final class MainStrings: Singleton, StringTable {
     var createTaskDescription: String {
         return self.localize("main.create.task.description")
     }
-
+    
     var editTaskName: String {
         return self.localize("main.edit.task.name")
     }
@@ -64,5 +71,37 @@ final class MainStrings: Singleton, StringTable {
     
     var editTaskDescription: String {
         return self.localize("main.edit.task.description")
+    }
+    
+    var textViewPlaceholder: String {
+        return self.localize("main.textview.placeholder")
+    }
+    
+    var deletedMessage: String {
+        return self.localize("main.deleted.message")
+    }
+    
+    var updatedMessage: String {
+        return self.localize("main.updated.message")
+    }
+    
+    var createdMessage: String {
+        return self.localize("main.created.message")
+    }
+    
+    var completedMessage: String {
+        return self.localize("main.completed.message")
+    }
+    
+    var errorNameInvalid: String {
+        return self.localize("main.error.name.invalid")
+    }
+    
+    var errorDateInvalid: String {
+        return self.localize("main.error.date.invalid")
+    }
+    
+    var errorDescriptionInvalid: String {
+        return self.localize("main.error.Description.invalid")
     }
 }

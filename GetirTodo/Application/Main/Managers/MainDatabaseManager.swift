@@ -79,14 +79,25 @@ final class MainDatabaseManager: Singleton, Database {
         self.deletedSubject.send(deleted == nil ? self.todos.deleted : deleted!)
     }
     
-    @objc func save() {
-        Todo.save()
-    }
+
     
     func observerTerminate() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.save), name: UIApplication.willTerminateNotification, object: nil)
     }
-
     
+    @objc func save() {
+        Todo.save()
+    }
+    
+    func erase() {
+        Todo.deleteAllTodos()
+        self.reload()
+    }
+    
+    func deleteSoftDeletes() {
+        self.todos.deleted.forEach { $0.delete() }
+        Todo.save()
+        self.reload()
+    }
     
 }

@@ -21,20 +21,10 @@ final class AppDelegate: UIResponder, UIApplicationDelegate, Singleton {
     var coordinator: MainCoordinator!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         self.setupCoordinator()
-        Todo.add(title: "Random task title for in-house test", about: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution", dueDate: Date())
-        Todo.add(title: "Random task title for in-house test", about: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution", dueDate: Date())
-        Todo.add(title: "Random task title for in-house test", about: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution", dueDate: Date())
-        Todo.add(title: "Random task title for in-house test", about: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution", dueDate: Date())
         return true
     }
     
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        print("BAck")
-    }
-    
-    // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)

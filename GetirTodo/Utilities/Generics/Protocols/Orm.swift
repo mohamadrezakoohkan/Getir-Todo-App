@@ -33,6 +33,19 @@ extension Orm where Self: NSManagedObject {
         do { try Self.context.save() } catch { print(error) }
     }
     
+    static func erase(context: NSManagedObjectContext = Self.context) {
+        let req = Self.deleteRequest
+        req.resultType = .resultTypeObjectIDs
+        do {
+            let result = try context.execute(req) as? NSBatchDeleteResult
+            let changes: [AnyHashable: Any] = [
+                NSDeletedObjectsKey: result?.result as! [NSManagedObjectID]
+            ]
+            NSManagedObjectContext.mergeChanges(fromRemoteContextSave: changes, into: [Self.context])
+        } catch { print(error) }
+        Self.save()
+    }
+    
     private static func new() -> Self {
         return NSManagedObject(entity: self.entity, insertInto: Self.context) as! Self
     }
@@ -52,11 +65,6 @@ extension Orm where Self: NSManagedObject {
     
     var context: NSManagedObjectContext! {
         return self.managedObjectContext
-    }
-    
-    func update(_ block: ((Self) -> Void)? = nil) {
-        block?(self)
-        guard self.hasChanges else { return }
     }
     
     func delete() {

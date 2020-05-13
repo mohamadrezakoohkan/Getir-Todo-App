@@ -43,7 +43,7 @@
                                     <navigationItem title="Getir Tasks" id="0s3-2a-5vw">
                                         <rightBarButtonItems>
                                             <barButtonItem style="done" id="cpO-6U-fmX">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2FE-Sb-ju9" customClass="ToggleButton" customModule="GetirTodo" customModuleProvider="target">
+                                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2FE-Sb-ju9" customClass="ToggleButton" customModule="GetirTodo" customModuleProvider="target">
                                                     <rect key="frame" x="362" y="0.0" width="32" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.34878706929999997" green="0.25011214609999999" blue="0.70986789459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -58,7 +58,7 @@
                                                 </button>
                                             </barButtonItem>
                                             <barButtonItem style="done" id="WmK-uN-bfU">
-                                                <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zwi-uQ-6Eb" customClass="ToggleButton" customModule="GetirTodo" customModuleProvider="target">
+                                                <button key="customView" hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zwi-uQ-6Eb" customClass="ToggleButton" customModule="GetirTodo" customModuleProvider="target">
                                                     <rect key="frame" x="322" y="0.0" width="32" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.34878706929999997" green="0.25011214609999999" blue="0.70986789459999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -232,33 +232,27 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-lU-cbo">
                                                 <rect key="frame" x="0.0" y="27.5" width="388" height="44"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name, shortcut or hint to remind you…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-LL-OSV">
-                                                        <rect key="frame" x="45" y="13" width="297.5" height="18"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name, shortcut or hint…" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-LL-OSV">
+                                                        <rect key="frame" x="45" y="13" width="330" height="18"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Uhj-8M-9gr" id="i2y-LQ-SPa"/>
+                                                        </connections>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEc-Qi-ScA">
-                                                        <rect key="frame" x="352.5" y="10" width="25.5" height="24"/>
-                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
-                                                        <color key="textColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.bullet.below.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-0g-gzN">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list.bullet.below.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ET8-0g-gzN">
                                                         <rect key="frame" x="12" y="13.5" width="20" height="17.5"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="GEc-Qi-ScA" firstAttribute="top" secondItem="YWL-lU-cbo" secondAttribute="top" constant="10" id="1hL-bq-4C7"/>
                                                     <constraint firstAttribute="bottom" secondItem="ET8-0g-gzN" secondAttribute="bottom" constant="12" id="21x-9U-POL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="2zV-LL-OSV" secondAttribute="trailing" constant="13" id="EdS-Aw-GHh"/>
                                                     <constraint firstItem="2zV-LL-OSV" firstAttribute="leading" secondItem="ET8-0g-gzN" secondAttribute="trailing" constant="13" id="Euo-Pf-gJq"/>
-                                                    <constraint firstAttribute="bottom" secondItem="GEc-Qi-ScA" secondAttribute="bottom" constant="10" id="PtG-ZZ-bM7"/>
                                                     <constraint firstItem="ET8-0g-gzN" firstAttribute="top" secondItem="YWL-lU-cbo" secondAttribute="top" constant="12" id="XfC-Gm-2ct"/>
                                                     <constraint firstAttribute="height" constant="44" id="ZUE-Je-k7d"/>
-                                                    <constraint firstItem="GEc-Qi-ScA" firstAttribute="leading" secondItem="2zV-LL-OSV" secondAttribute="trailing" constant="10" id="bH1-Yf-LP2"/>
                                                     <constraint firstItem="ET8-0g-gzN" firstAttribute="leading" secondItem="YWL-lU-cbo" secondAttribute="leading" constant="12" id="gSb-f8-iz3"/>
-                                                    <constraint firstAttribute="trailing" secondItem="GEc-Qi-ScA" secondAttribute="trailing" constant="10" id="gro-uO-EED"/>
                                                     <constraint firstItem="2zV-LL-OSV" firstAttribute="top" secondItem="YWL-lU-cbo" secondAttribute="top" constant="13" id="h4P-3A-Bpn"/>
                                                     <constraint firstAttribute="bottom" secondItem="2zV-LL-OSV" secondAttribute="bottom" constant="13" id="kwG-hB-oC5"/>
                                                 </constraints>
@@ -282,27 +276,28 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOO-kp-jCP">
                                                 <rect key="frame" x="0.0" y="27.5" width="388" height="44"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w3s-rN-DO2">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w3s-rN-DO2">
                                                         <rect key="frame" x="12" y="13" width="21" height="17.5"/>
-                                                        <color key="tintColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en9-bu-uiM">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="A date in calendar..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRH-Gn-uBl">
                                                         <rect key="frame" x="46" y="13" width="329" height="18"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                                                        <state key="normal" title="A date in calendar…">
-                                                            <color key="titleColor" red="0.7686944604" green="0.7684834599" blue="0.77646636960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        </state>
-                                                    </button>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Uhj-8M-9gr" id="XvF-T2-PKL"/>
+                                                        </connections>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="en9-bu-uiM" firstAttribute="top" secondItem="gOO-kp-jCP" secondAttribute="top" constant="13" id="4JL-BT-WEv"/>
-                                                    <constraint firstAttribute="bottom" secondItem="en9-bu-uiM" secondAttribute="bottom" constant="13" id="DCF-M5-lhc"/>
-                                                    <constraint firstAttribute="trailing" secondItem="en9-bu-uiM" secondAttribute="trailing" constant="13" id="DXn-8k-NrB"/>
+                                                    <constraint firstItem="KRH-Gn-uBl" firstAttribute="top" secondItem="gOO-kp-jCP" secondAttribute="top" constant="13" id="1YO-1m-Ajl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="KRH-Gn-uBl" secondAttribute="trailing" constant="13" id="CU1-Pz-8i2"/>
                                                     <constraint firstAttribute="height" constant="44" id="E8B-wg-efM"/>
+                                                    <constraint firstItem="KRH-Gn-uBl" firstAttribute="leading" secondItem="w3s-rN-DO2" secondAttribute="trailing" constant="13" id="IS6-Pe-l0O"/>
                                                     <constraint firstItem="w3s-rN-DO2" firstAttribute="top" secondItem="gOO-kp-jCP" secondAttribute="top" constant="12" id="aaX-R1-dD3"/>
+                                                    <constraint firstAttribute="bottom" secondItem="KRH-Gn-uBl" secondAttribute="bottom" constant="13" id="bjG-zv-95v"/>
                                                     <constraint firstAttribute="bottom" secondItem="w3s-rN-DO2" secondAttribute="bottom" constant="12" id="t1H-We-Hh4"/>
-                                                    <constraint firstItem="en9-bu-uiM" firstAttribute="leading" secondItem="w3s-rN-DO2" secondAttribute="trailing" constant="13" id="voG-XS-rf6"/>
                                                     <constraint firstItem="w3s-rN-DO2" firstAttribute="leading" secondItem="gOO-kp-jCP" secondAttribute="leading" constant="12" id="wbF-7O-BzS"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -325,11 +320,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Yg-8p-w8Z">
                                                 <rect key="frame" x="0.0" y="27.5" width="388" height="150"/>
                                                 <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nX-rl-uJJ">
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Describe this task or write a note…" translatesAutoresizingMaskIntoConstraints="NO" id="7nX-rl-uJJ">
                                                         <rect key="frame" x="13" y="5" width="362" height="132"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="textColor" red="0.7686944604" green="0.7684834599" blue="0.77646636960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         <userDefinedRuntimeAttributes>
@@ -337,6 +331,9 @@
                                                                 <integer key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="Uhj-8M-9gr" id="Z2B-dE-V5V"/>
+                                                        </connections>
                                                     </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -370,6 +367,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="deleteTapped:" destination="Uhj-8M-9gr" eventType="touchUpInside" id="rKQ-KW-evU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAa-yV-NXt">
                                                 <rect key="frame" x="133.5" y="0.0" width="121" height="44"/>
@@ -383,6 +383,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="createOrUpdateTapped:" destination="Uhj-8M-9gr" eventType="touchUpInside" id="zZa-Nc-2uh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Jx-Rf-sp1">
                                                 <rect key="frame" x="266.5" y="0.0" width="121.5" height="44"/>
@@ -396,6 +399,9 @@
                                                         <integer key="value" value="10"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="completeTapped:" destination="Uhj-8M-9gr" eventType="touchUpInside" id="cNb-lo-PRM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -421,10 +427,19 @@
                         <viewLayoutGuide key="safeArea" id="Yq1-N6-dGT"/>
                     </view>
                     <connections>
+                        <outlet property="aboutHint" destination="cMH-Wh-sog" id="D8i-f7-eYP"/>
                         <outlet property="completeBtn" destination="0Jx-Rf-sp1" id="vjV-C9-id0"/>
                         <outlet property="createBtn" destination="hAa-yV-NXt" id="hqu-UF-JIi"/>
+                        <outlet property="dateHint" destination="vH0-tD-Apj" id="A2V-an-yez"/>
                         <outlet property="deleteBtn" destination="DML-X4-0oi" id="Fv9-IP-asY"/>
+                        <outlet property="dueDateField" destination="KRH-Gn-uBl" id="jow-Zr-suf"/>
+                        <outlet property="dueDateImg" destination="w3s-rN-DO2" id="sye-hX-DpK"/>
+                        <outlet property="nameField" destination="2zV-LL-OSV" id="pX4-uw-VgV"/>
+                        <outlet property="nameHint" destination="hTT-Uf-7tA" id="WYG-pb-OfW"/>
+                        <outlet property="nameIcon" destination="ET8-0g-gzN" id="b10-SC-yXS"/>
                         <outlet property="navbar" destination="TKW-Mm-rrH" id="AMy-I6-waM"/>
+                        <outlet property="stackView" destination="KqV-wN-dRs" id="itK-j0-Ltg"/>
+                        <outlet property="textView" destination="7nX-rl-uJJ" id="bQn-sA-Cfk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nME-p2-vdB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

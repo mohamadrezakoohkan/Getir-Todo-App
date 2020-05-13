@@ -6,6 +6,8 @@
   Copyright © 1399 AP Mohamadreza Koohkan. All rights reserved.
 */
 
+"main.complete" = "Complete";
+"main.delete" = "Delete";
 "main.create" = "Create";
 "main.edit" = "Edit";
 "main.update" = "Update";
@@ -18,3 +20,11 @@
 "main.edit.task.name" = "Name";
 "main.edit.task.date" = "Due date";
 "main.edit.task.description" = "Description";
+"main.textview.placeholder" = "Describe this task or write a note…";
+"main.deleted.message" = "Task deleted successfully";
+"main.updated.message" = "Task updated successfully";
+"main.created.message" = "Task created successfully";
+"main.completed.message" = "Task completed successfully";
+"main.error.name.invalid" = "Name is not valid";
+"main.error.date.invalid" = "Due date is not valid";
+"main.error.Description.invalid" = "Description is not valid";
