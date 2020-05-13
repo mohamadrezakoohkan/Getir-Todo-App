@@ -11,7 +11,7 @@ import Combine
 
 enum TodoListItem: String {
 
-    case todo = "Todo"
+    case todo = "ToDo"
     case completed = "Completed"
     case deleted = "Deleted"
     

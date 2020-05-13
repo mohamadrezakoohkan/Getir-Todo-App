@@ -8,7 +8,7 @@ Mentioned limitations:
 - Swift
 - CoreData/Realm
 
-I choosed `CoreData` instead of `Realm` because It is apple known framework and also have benefits:
+I've choosed `CoreData` instead of `Realm` because It is apple known framework and also have benefits:
 - use `static dispatch` instead of  `dynamic dispatch` 
 - faster than `Realm`
 
