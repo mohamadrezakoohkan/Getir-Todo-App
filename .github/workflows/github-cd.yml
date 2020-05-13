@@ -2,7 +2,7 @@
 name: Upload
 on:
   push:
-    branches: [ master ]
+    branches: [ ci-configuration ]
   pull_request:
     branches: [ master ]
 jobs:
