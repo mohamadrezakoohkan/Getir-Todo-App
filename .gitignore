@@ -1,4 +1,6 @@
 .DS_Store
 ExportOptions.plist
+DistributionSummary.plist
+Packaging.log
 jetpush-config.env
 build
