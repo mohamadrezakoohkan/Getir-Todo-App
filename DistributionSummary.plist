@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GetirTodo.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>93C908942FC416671F19CADFEC189549E27E5C05</string>
+				<key>dateExpires</key>
+				<string>1/9/1400 AP</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>BPYLDK5ZR2.codes.mohamadreza.GetirTodo</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>BPYLDK5ZR2</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>BPYLDK5ZR2.codes.mohamadreza.GetirTodo</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>GetirTodo.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>c0b08f79-d9ee-4e98-ae77-e7df9934be7d</string>
+				<key>name</key>
+				<string>iOS Team Ad Hoc Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>BPYLDK5ZR2</string>
+				<key>name</key>
+				<string></string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
