@@ -2,7 +2,7 @@
 name: Upload
 on:
   push:
-    branches: [ master ]
+    branches: [ ci-configuration ]
   pull_request:
     branches: [ master ]
 jobs:
@@ -14,5 +14,5 @@ jobs:
       uses: actions/upload-artifact@v1.0.0
       with: 
         name: Assets
-        path: build/ipa/
+        path: ipa/
 
