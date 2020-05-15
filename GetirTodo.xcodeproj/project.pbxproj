@@ -183,8 +183,9 @@
 		DD120530246AABB7009FACF5 /* GetirTodo */ = {
 			isa = PBXGroup;
 			children = (
-				DD120560246AACE9009FACF5 /* Utilities */,
 				DD120556246AAC7D009FACF5 /* Application */,
+				DD5EAB7C246E79A400917DC9 /* Core */,
+				DD120560246AACE9009FACF5 /* Utilities */,
 				DD120531246AABB7009FACF5 /* AppDelegate.swift */,
 				DD120533246AABB7009FACF5 /* SceneDelegate.swift */,
 				DD12053D246AABB8009FACF5 /* Assets.xcassets */,
@@ -293,10 +294,9 @@
 		DD120560246AACE9009FACF5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DDF5E41F246B102D0009B69B /* SwipeMenu */,
 				DDF5E409246AEE9B0009B69B /* Reactive */,
 				DD120579246AB9AA009FACF5 /* ViewComponents */,
-				DD120575246AB8AE009FACF5 /* Generics */,
-				DD120576246AB8B8009FACF5 /* Coordinator */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -370,7 +370,6 @@
 		DD120579246AB9AA009FACF5 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				DDF5E41F246B102D0009B69B /* SwipeMenu */,
 				DD12056E246AB4C2009FACF5 /* BaseViewController.swift */,
 				DDF5E410246AEF8C0009B69B /* UIControl+Observer.swift */,
 				DDF5E430246B17D30009B69B /* UIColor+Color.swift */,
@@ -379,6 +378,15 @@
 				DDAA3E8F246C26D0008CCF60 /* Keyboard+Appear.swift */,
 			);
 			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		DD5EAB7C246E79A400917DC9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DD120576246AB8B8009FACF5 /* Coordinator */,
+				DD120575246AB8AE009FACF5 /* Generics */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		DD807CB4246BFFF500C97539 /* Strings */ = {
