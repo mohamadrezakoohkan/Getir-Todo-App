@@ -49,10 +49,6 @@ final class TableVC: UITableViewController {
         return self.viewModel.estimatedHeight(indexPath)
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.todos[indexPath.row].softDelete()
-    }
-    
     override func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         return self.viewModel.menu(for: self.todos[indexPath.row])
     }
